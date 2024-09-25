@@ -1,17 +1,46 @@
-header {
+.header-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border-bottom: 2px solid black; */
+    
 }
+
+@media only screen and (max-width: 600px) {
+    .header-wrapper{
+        flex-direction: column;
+    }
+
+    nav{
+        width: 100%;
+        flex-direction: column; 
+        
+    }
+
+    nav>a{
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo{
+        margin-bottom: 15px;
+    }
+}
+
+
 
 .logo {
     height: 50px;
     width: 50px;
-    background-image: url(../assets/logo.jpeg);
+    background-image: url(../assets/code.png);
     background-size: cover;
     background-position: center;
     border-radius: 50%;
 
+}
+
+nav {
+    display: flex;
 }
 
 nav>a {
@@ -19,12 +48,136 @@ nav>a {
     padding: 8px;
     color: black;
     text-decoration: none;
-    display: inline;
+
 }
 
 .banner {
-    height: 480px;
-    background-image: url(../assets/banner.jpg);
+    height: 578px;
+    width: 1366px;
+    /* background-image: url(../assets/banner3.jpeg); */
     background-size: cover;
     background-position: center;
+}
+
+.header-center {
+    display: flex; 
+    justify-content: center;
+
+}
+
+.form_group {
+    display: flex;
+}
+
+.service {
+    display: flex;
+    justify-content: space-around;
+}
+
+.software-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.uiux_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.consulting_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.software {
+    height: 100px;
+    width: 100px;
+    background-image: url(../assets/software.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.uiux {
+    height: 100px;
+    width: 100px;
+    background-image: url(../assets/uiux.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.consulting {
+    height: 100px;
+    width: 100px;
+    background-image: url(../assets/consulting.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.porto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.health-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.office-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.health {
+    height: 150px;
+    width: 200px;
+    background-image: url(../assets/health.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+}
+
+.office {
+    height: 150px;
+    width: 200px;
+    background-image: url(../assets/office.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+}
+
+.education {
+    height: 150px;
+    width: 200px;
+    background-image: url(../assets/education.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_output {
+    margin-right: 300px;
+}
+
+footer {
+    display: flex; 
+    justify-content: flex-end;
 }

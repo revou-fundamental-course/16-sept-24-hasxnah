@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="header-wrapper">
         <!-- Logo -->
         <div class="logo"></div>
         
@@ -17,22 +17,38 @@
             <a href="#section-profile">Our Profile</a>
             <a href="#section-portfolio">Portfolio</a>
             <a href="#section-contact">Message Us</a>
+            
         </nav>
     </header>
 
-    <hr>
+    <hr />
 
     <main>
         <!-- Home -->
         <section id="section-home">
             <header>
-                <h1>Hi User, welcome to my website!</h1>
+                <h1>Hi <span id="guest_name"></span>, welcome to our website!</h1>
             </header>
 
             <article>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis eligendi amet est veniam alias natus eveniet placeat assumenda corrupti consectetur ad, totam voluptas similique aperiam, modi, sunt quibusdam facilis magni.</p>
+                <p>Your trusted partner in innovative and effective IT solutions. We are dedicated to helping your business achieve its goals through advanced technology and personalized consulting services.</p>
                 <!-- Banner -->
-                <div class="banner"></div>
+                <div>
+                    <img 
+                    class="banner"
+                     src="assets/banner.jpg"
+                     />
+                    <img 
+                    class="banner"
+                     src="assets/banner4.jpg"
+                     />
+                    <img 
+                    class="banner"
+                     src="assets/banner5.jpg"
+                     />
+                     <button onclick="plusDivs(-1)">Previous</button>
+                     <button onclick="plusDivs(1)">Next</button>
+                </div>
                 
             </article>
         </section>
@@ -41,6 +57,30 @@
 
         <!-- Our Profile -->
         <section id="section-profile">
+            <header class="header-center">
+                <h1>Our Profile</h1>
+            </header>
+
+            <article>
+                <p>Welcome to our profile website, where innovation meets quality! We are a dedicated team of IT professionals committed to delivering the best solutions tailored to your business needs. With over 10 years of experience, we believe that every project is an opportunity to create something better and valuable. Here are some of our services:</p>
+                
+                <div class="service">
+                    <div class="software-group">
+                        <div class="software"></div>
+                        <p>Software Development</p>
+                    </div>
+                    <div class="uiux-group">
+                        <div class="uiux"></div>
+                        <p>UI/UX Design</p>
+                    </div>
+                    <div class="consulting-group">
+                    <div class="consulting"></div>
+                    <p>IT Consulting</p>
+                    </div>
+                </div>
+
+
+            </article>
 
         </section>
 
@@ -48,6 +88,28 @@
 
         <!-- Portfolio -->
         <section id="section-portfolio">
+            <header class="header-center">
+                <h1>Portfolio</h1>
+            </header>
+            <div>
+                <p>Here, you will find a collection of our projects that showcase our skills in design, development, and problem-solving across various industries. Each project reflects our commitment to quality and our passion for creating impactful solutions that address real-world challenges. Explore our work and discover how we transform ideas into successful outcomes.</p>
+                
+                <div class="porto">
+                    <div class="health-group">
+                        <div class="health"></div>
+                        <p>Healthcare Mobile App</p>
+                    </div>
+                    <div class="office-group">
+                        <div class="office"></div>
+                        <p>Office Mobile App</p>
+                    </div>
+                    <div class="education-group">
+                    <div class="education"></div>
+                    <p>Education Mobile App</p>
+                    </div>
+                </div>
+            
+            </div>
 
         </section>
 
@@ -56,11 +118,89 @@
         <!-- Message Us -->
         <section id="section-contact">
 
+            <header class="header-center">
+                <h1>Message Us</h1>
+            </header>
+            
+            <div class="message-container">
+                <!-- Form Input -->
+                <form class="form_input" name="message_form" onsubmit="return validateForm()">
+                    Nama: <input placeholder="Nama" type="text" name="full-name"/>
+                    <br/>
+
+                    Tanggal Lahir:
+                    <input type="date" name="birth-date"/>
+                    <br/>
+
+                    Jenis Kelamin:
+                    <input type="radio" id="male" name="gender" value="male" />
+                    <label for="male">Laki-Laki</label>
+                    <input type="radio" id="female" name="gender" value="female" />
+                    <label for="female">Perempuan</label>
+                    <br />
+
+                    Pesan:
+                    <textarea name="messages" placeholder="Pesan"></textarea>
+                    <br />
+
+                    <input type="submit" value="submit">
+                    
+                    <!-- <div class="form_group">
+                        <div class="form_label" id="nama">Nama</div>
+                        <div class="form_separator">:</div>
+                        <div class="form_field">
+                            <input type="text" id="nama" placeholder="Nama" name="nama" required>
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <div class="form_label" id="tanggal_lahir">Tanggal Lahir</div>
+                        <div class="form_separator">:</div>
+                        <div class="form_field">
+                            <input type="date" id="tanggal_lahir" name="tanggal" required>
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <div class="form_label" id="jenis_kelamin">Jenis Kelamin</div>
+                        <div class="form_separator">:</div>
+                        <div class="form_field">
+                            <input type="radio" id="laki" name="kelamin" value="Laki-Laki" required>
+                            <label for="laki">Laki-Laki</label>
+                            <input type="radio" id="pr" name="kelamin" value="Perempuan">
+                            <label for="pr">Perempuan</label>
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <div class="form_label" id="pesan">Pesan</div>
+                        <div class="form_separator">:</div>
+                        <div class="form_field">
+                            <textarea name="pesan" id="pesan" cols="23" rows="5" placeholder="Pesan" required></textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="submit">Submit</button>
+                    </div> -->
+                </form>
+
+                <!-- Form Output -->
+                 <div class="form_output">
+                    <p>Nama : <span id="sender-full-name"></span></p>
+                    <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+                    <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+                    <p>Pesan : <span id="sender-messages"></span></p>
+                 </div>
+
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>RevoU Software Engineering Fundamental Course</p>
+        <p>RevoU Software Engineering Fundamental Course - Created by Uci</p>
     </footer>
+
+    <script src="javascript/script.js"></script>
 </body>
 </html>
