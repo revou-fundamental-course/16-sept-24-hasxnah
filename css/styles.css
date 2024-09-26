@@ -1,11 +1,3 @@
-.header-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* border-bottom: 2px solid black; */
-    
-}
-
 @media only screen and (max-width: 600px) {
     .header-wrapper{
         flex-direction: column;
@@ -27,6 +19,12 @@
     }
 }
 
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 .logo {
@@ -54,9 +52,19 @@ nav>a {
 .banner {
     height: 578px;
     width: 1366px;
-    /* background-image: url(../assets/banner3.jpeg); */
+    /*  */
     background-size: cover;
     background-position: center;
+}
+
+.banner-1 {
+    background-image: url(../assets/banner.jpg);
+}
+.banner-2 {
+    background-image: url(../assets/banner4.jpg);
+}
+.banner-3 {
+    background-image: url(../assets/banner5.jpg);
 }
 
 .header-center {
@@ -171,10 +179,36 @@ nav>a {
 .message-container {
     display: flex;
     justify-content: space-between;
+    align-content: center;
+    
+}
+
+.form_input {
+    display: grid;
+    border: 1px solid black;
+    border-radius: 2%;
+    padding: 20px;
+    margin: 10px;
 }
 
 .form_output {
-    margin-right: 300px;
+    width: 288px;
+    border: 1px solid black;
+    border-radius: 2%;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+@media only screen and (max-width: 645px) {
+    .porto{
+        display: block
+    }
+
+    .message-container {
+        display: grid;
+        justify-content: center;
+    }
 }
 
 footer {

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
     <header class="header-wrapper">
         <!-- Logo -->
         <div class="logo"></div>
@@ -31,29 +32,20 @@
             </header>
 
             <article>
-                <p>Your trusted partner in innovative and effective IT solutions. We are dedicated to helping your business achieve its goals through advanced technology and personalized consulting services.</p>
+                <p>Your trusted partner in innovative and effective IT solutions. 
+                    We are dedicated to helping your business achieve its goals through advanced technology 
+                    and personalized consulting services.
+                </p>
+
                 <!-- Banner -->
-                <div>
-                    <img 
-                    class="banner"
-                     src="assets/banner.jpg"
-                     />
-                    <img 
-                    class="banner"
-                     src="assets/banner4.jpg"
-                     />
-                    <img 
-                    class="banner"
-                     src="assets/banner5.jpg"
-                     />
-                     <button onclick="plusDivs(-1)">Previous</button>
-                     <button onclick="plusDivs(1)">Next</button>
-                </div>
-                
+                <!-- Multiple class -->
+                <div class="banner banner-1"></div>
+                <div class="banner banner-2"></div>
+                <div class="banner banner-3"></div>
             </article>
         </section>
 
-        <hr>
+        <hr />
 
         <!-- Our Profile -->
         <section id="section-profile">
@@ -62,7 +54,11 @@
             </header>
 
             <article>
-                <p>Welcome to our profile website, where innovation meets quality! We are a dedicated team of IT professionals committed to delivering the best solutions tailored to your business needs. With over 10 years of experience, we believe that every project is an opportunity to create something better and valuable. Here are some of our services:</p>
+                <p>Welcome to our profile website, where innovation meets quality! 
+                    We are a dedicated team of IT professionals committed to delivering the best solutions tailored to your business needs. 
+                    With over 10 years of experience, we believe that every project is an opportunity to create something better and valuable. 
+                    Here are some of our services:
+                </p>
                 
                 <div class="service">
                     <div class="software-group">
@@ -74,25 +70,27 @@
                         <p>UI/UX Design</p>
                     </div>
                     <div class="consulting-group">
-                    <div class="consulting"></div>
-                    <p>IT Consulting</p>
+                        <div class="consulting"></div>
+                        <p>IT Consulting</p>
                     </div>
                 </div>
-
-
             </article>
-
         </section>
 
-        <hr>
+        <hr />
 
         <!-- Portfolio -->
         <section id="section-portfolio">
             <header class="header-center">
                 <h1>Portfolio</h1>
             </header>
+            
             <div>
-                <p>Here, you will find a collection of our projects that showcase our skills in design, development, and problem-solving across various industries. Each project reflects our commitment to quality and our passion for creating impactful solutions that address real-world challenges. Explore our work and discover how we transform ideas into successful outcomes.</p>
+                <p>Here, you will find a collection of our projects that showcase our skills in design, 
+                    development, and problem-solving across various industries. Each project reflects our commitment 
+                    to quality and our passion for creating impactful solutions that address real-world challenges. 
+                    Explore our work and discover how we transform ideas into successful outcomes.
+                </p>
                 
                 <div class="porto">
                     <div class="health-group">
@@ -104,16 +102,14 @@
                         <p>Office Mobile App</p>
                     </div>
                     <div class="education-group">
-                    <div class="education"></div>
-                    <p>Education Mobile App</p>
+                        <div class="education"></div>
+                        <p>Education Mobile App</p>
                     </div>
                 </div>
-            
             </div>
-
         </section>
 
-        <hr>
+        <hr />
 
         <!-- Message Us -->
         <section id="section-contact">
@@ -123,66 +119,33 @@
             </header>
             
             <div class="message-container">
+
                 <!-- Form Input -->
-                <form class="form_input" name="message_form" onsubmit="return validateForm()">
-                    Nama: <input placeholder="Nama" type="text" name="full-name"/>
-                    <br/>
-
-                    Tanggal Lahir:
-                    <input type="date" name="birth-date"/>
-                    <br/>
-
-                    Jenis Kelamin:
-                    <input type="radio" id="male" name="gender" value="male" />
-                    <label for="male">Laki-Laki</label>
-                    <input type="radio" id="female" name="gender" value="female" />
-                    <label for="female">Perempuan</label>
-                    <br />
-
-                    Pesan:
-                    <textarea name="messages" placeholder="Pesan"></textarea>
-                    <br />
-
-                    <input type="submit" value="submit">
-                    
-                    <!-- <div class="form_group">
-                        <div class="form_label" id="nama">Nama</div>
-                        <div class="form_separator">:</div>
-                        <div class="form_field">
-                            <input type="text" id="nama" placeholder="Nama" name="nama" required>
-                        </div>
-                    </div>
-
-                    <div class="form_group">
-                        <div class="form_label" id="tanggal_lahir">Tanggal Lahir</div>
-                        <div class="form_separator">:</div>
-                        <div class="form_field">
-                            <input type="date" id="tanggal_lahir" name="tanggal" required>
-                        </div>
-                    </div>
-
-                    <div class="form_group">
-                        <div class="form_label" id="jenis_kelamin">Jenis Kelamin</div>
-                        <div class="form_separator">:</div>
-                        <div class="form_field">
-                            <input type="radio" id="laki" name="kelamin" value="Laki-Laki" required>
-                            <label for="laki">Laki-Laki</label>
-                            <input type="radio" id="pr" name="kelamin" value="Perempuan">
-                            <label for="pr">Perempuan</label>
-                        </div>
-                    </div>
-
-                    <div class="form_group">
-                        <div class="form_label" id="pesan">Pesan</div>
-                        <div class="form_separator">:</div>
-                        <div class="form_field">
-                            <textarea name="pesan" id="pesan" cols="23" rows="5" placeholder="Pesan" required></textarea>
-                        </div>
+                <form class="form_input" name="message_form" onsubmit="return false;">
+                    <div>
+                        <label for="input-name">Nama :</label>
+                        <input type="text" id="input-name" placeholder="Nama">
                     </div>
 
                     <div>
-                        <button type="submit" id="submit">Submit</button>
-                    </div> -->
+                        <label for="input-date">Tanggal lahir :</label>
+                        <input type="date" id="input-date" />
+                    </div>
+
+                    <div>
+                        <label>Jenis Kelamin :</label>
+                        <input type="radio" id="male" name="input-gender" value="Laki-Laki">
+                        <label for="male">Laki-laki</label>
+                        <input type="radio" id="female" name="input-gender" value="Perempuan">
+                        <label for="female">Perempuan</label>
+                    </div>
+
+                    <div>
+                        <label for="input-messages">Pesan :</label>
+                        <textarea name="input-messages" id="input-messages" placeholder="Pesan"></textarea>
+                    </div>
+
+                    <button type="submit" onclick="validateForm()">Submit</button>
                 </form>
 
                 <!-- Form Output -->
